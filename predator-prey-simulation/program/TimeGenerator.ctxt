@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=TimeGenerator
+comment0.text=\r\n\ A\ time\ generator.\ This\ class\ is\ used\ to\ calculate\ time\ within\ the\ simulation.\r\n\r\n\ @author\ Jasdeep\ and\ Ronak\r\n\ @version\ 1\r\n
+comment1.params=
+comment1.target=TimeGenerator()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ TimeGenerator\r\n
+comment2.params=
+comment2.target=java.lang.String\ getDayTime()
+comment2.text=\r\n\ Calculates\ whether\ the\ Simulation\ has\ entered\ Day\r\n\ or\ Night\ phases.\r\n\ @return\ Day\ or\ Night\ strings.\r\n
+comment3.params=step
+comment3.target=void\ setTempStep(int)
+comment3.text=\r\n\ Allows\ new\ value\ for\ tempStep.\r\n\ @param\ step\ New\ value\ for\ tempStep.\r\n
+comment4.params=
+comment4.target=int\ getTempStep()
+comment4.text=\r\n\ Returns\ the\ number\ tempSteps\ used\ for\ tracking\ time.\r\n\ @return\ The\ value\ tempStep.\r\n
+comment5.params=
+comment5.target=void\ incrementTempStep()
+comment5.text=\r\n\ Adds\ one\ to\ tempStep,\ ticks\ time.\r\n
+comment6.params=
+comment6.target=java.lang.String\ getTime()
+comment6.text=\r\n\ Returns\ the\ time\ of\ day.\r\n\ @return\ time\ of\ day.\r\n
+numComments=7

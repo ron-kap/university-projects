@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=DiseaseGenerator
+comment0.text=\r\n\ A\ disease\ generator.\ This\ class\ is\ used\ to\ store\r\n\ the\ diseases\ of\ the\ simulation\ and\ generate\ them\ randomly.\r\n\r\n\ @author\ Jasdeep\ and\ Ronak\r\n\ @version\ 1\r\n
+comment1.params=
+comment1.target=DiseaseGenerator()
+comment1.text=\r\n\ Create\ a\ disease\ generator\r\n
+comment2.params=randomChance
+comment2.target=java.lang.String\ generateDisease(int)
+comment2.text=\r\n\ Generates\ a\ disease.\r\n\ Uses\ the\ randomChance\ parameter\ as\ the\ percentage\ chance\r\n\ of\ generating\ a\ disease,\ then\ randomly\ selects\ a\ disease\r\n\ from\ the\ array.\r\n\r\n\ @param\ \ randomChance\ the\ chance\ of\ a\ disease\ being\ generated\r\n\ @return\ the\ disease\ to\ be\ applied\ to\ the\ simulation\r\n
+numComments=3

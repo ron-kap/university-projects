@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Prey
+comment0.text=\r\n\ A\ simple\ model\ of\ all\ Prey\ in\ the\ simulation,\ \r\n\ they\ are\ species\ that\ are\ hunted\ by\ another\ for\ food.\r\n\r\n\ @author\ Jasdeep\ and\ Ronak\r\n\ @version\ 1.0\r\n
+comment1.params=field\ location
+comment1.target=Prey(Field,\ Location)
+comment1.text=\r\n\ Create\ a\ Prey,\ foundation\ of\ all\ Prey\ animals\ -\r\n\ rabbits,\ mice\ and\ squirrels.\r\n\ \r\n\ @param\ field\ The\ field\ currently\ occupied.\r\n\ @param\ location\ The\ location\ within\ the\ field.\r\n
+comment2.params=
+comment2.target=int\ getPlantFoodValue()
+comment2.text=\r\n\ Returns\ the\ food\ value\ of\ a\ single\ plant.\r\n\ @return\ plant's\ food\ value.\r\n
+comment3.params=disease\ randomChance
+comment3.target=void\ applyDisease(java.lang.String,\ int)
+comment3.text=\r\n\ Applies\ the\ effect\ of\ a\ disease\ to\ the\ animal\r\n\ @param\ disease\ The\ disease\ to\ be\ applied\r\n\ @param\ randomChance\ The\ chance\ of\ getting\ infected\r\n
+comment4.params=weather
+comment4.target=boolean\ canHunt(java.lang.String)
+comment4.text=\r\n\ Checks\ whether\ the\ animal\ can\ hunt,\ given\ its\ weather\ conditions\r\n\ and/or\ carried\ diseases\r\n\ @return\ if\ the\ animal\ can\ hunt\ or\ not.\r\n
+numComments=5

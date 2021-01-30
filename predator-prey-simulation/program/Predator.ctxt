@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Predator
+comment0.text=\r\n\ A\ simple\ model\ of\ all\ Predators\ in\ the\ simulation,\ \r\n\ they\ are\ species\ that\ hunt\ other\ species\ for\ food.\r\n\r\n\ @author\ Jasdeep\ and\ Ronak\r\n\ @version\ 1.0\r\n
+comment1.params=field\ location
+comment1.target=Predator(Field,\ Location)
+comment1.text=\r\n\ Create\ a\ Predator,\ foundation\ of\ all\ Predator\ animals\ -\r\n\ foxes\ and\ owls.\r\n\ \r\n\ @param\ field\ The\ field\ currently\ occupied.\r\n\ @param\ location\ The\ location\ within\ the\ field.\r\n
+comment2.params=
+comment2.target=int\ getRabbitFoodValue()
+comment2.text=\r\n\ Returns\ the\ food\ value\ of\ a\ single\ rabbit.\r\n\ @return\ rabbit's\ food\ value.\r\n
+comment3.params=
+comment3.target=int\ getMouseFoodValue()
+comment3.text=\r\n\ Returns\ the\ food\ value\ of\ a\ single\ mouse.\r\n\ @return\ mouse's\ food\ value.\r\n
+comment4.params=
+comment4.target=int\ getSquirrelFoodValue()
+comment4.text=\r\n\ Returns\ the\ food\ value\ of\ a\ single\ squirrel.\r\n\ @return\ squirrel's\ food\ value.\r\n
+comment5.params=disease\ randomChance
+comment5.target=void\ applyDisease(java.lang.String,\ int)
+comment5.text=\r\n\ Applies\ the\ effect\ of\ a\ disease\ to\ the\ animal\r\n\ @param\ disease\ The\ disease\ to\ be\ applied\r\n\ @param\ randomChance\ The\ chance\ of\ getting\ infected\r\n
+comment6.params=weather
+comment6.target=boolean\ canHunt(java.lang.String)
+comment6.text=\r\n\ Checks\ whether\ the\ animal\ can\ hunt,\ given\ its\ weather\ conditions\r\n\ and/or\ carried\ diseases\r\n\ @return\ if\ the\ animal\ can\ hunt\ or\ not.\r\n
+numComments=7

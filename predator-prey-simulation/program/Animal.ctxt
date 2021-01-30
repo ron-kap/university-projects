@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Animal
+comment0.text=\r\n\ A\ simple\ model\ of\ all\ Animals\ in\ the\ simulation,\ \r\n\ they\ are\ biological\ creatures\ that\ must\ eat\ to\ survive.\r\n\r\n\ @author\ Jasdeep\ and\ Ronak\r\n\ @version\ 1.0\r\n
+comment1.params=field\ location
+comment1.target=Animal(Field,\ Location)
+comment1.text=\r\n\ Create\ a\ Animal,\ foundation\ of\ all\ Animal\ creatures\ -\r\n\ foxes,\ owls,\ rabbits,\ mice,\ squirrels\ and\ Bigfoot.\r\n\ \r\n\ @param\ field\ The\ field\ currently\ occupied.\r\n\ @param\ location\ The\ location\ within\ the\ field.\r\n
+comment2.params=
+comment2.target=boolean\ getSexMale()
+comment2.text=\r\n\ Return\ the\ animal's\ sex.\r\n\ @return\ The\ animal's\ sex.\r\n
+comment3.params=sexMale
+comment3.target=void\ setSexMale(boolean)
+comment3.text=\r\n\ Permits\ to\ change\ animal's\ sex.\r\n\ @param\ ange\ The\ animal's\ new\ sex.\r\n
+comment4.params=
+comment4.target=Location\ findFood()
+comment4.text=\r\n\ Abstract\ method\ to\ retrieve\ animal's\ prey\ location.\r\n\ @return\ Where\ food\ was\ found.\r\n
+comment5.params=canHunt
+comment5.target=void\ move(boolean)
+comment5.text=\r\n\ This\ is\ what\ the\ animal\ does\ most\ of\ the\ time\:\ \r\n\ it\ moves\ and\ hunts\ for\ food.\r\n
+comment6.params=weather
+comment6.target=boolean\ canHunt(java.lang.String)
+comment6.text=\r\n\ Checks\ whether\ the\ animal\ can\ hunt,\ given\ its\ weather\ conditions\r\n\ and/or\ carried\ diseases\r\n\ @return\ if\ the\ animal\ can\ hunt\ or\ not.\r\n
+numComments=7

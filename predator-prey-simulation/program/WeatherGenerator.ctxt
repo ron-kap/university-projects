@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=WeatherGenerator
+comment0.text=\r\n\ A\ weather\ generator.\ This\ class\ is\ used\ to\ store\r\n\ the\ types\ of\ weather\ in\ the\ simulation\ and\ generate\ them\ randomly.\r\n\r\n\ @author\ Jasdeep\ and\ Ronak\r\n\ @version\ 1.0\r\n
+comment1.params=
+comment1.target=WeatherGenerator()
+comment1.text=\r\n\ Creates\ a\ weather\ generator\r\n
+comment2.params=randomChance
+comment2.target=java.lang.String\ generateWeather(int)
+comment2.text=\r\n\ Generates\ weather.\r\n\ Uses\ the\ randomChance\ parameter\ as\ the\ percentage\ chance\r\n\ of\ generating\ a\ type\ of\ weather,\ then\ randomly\ selects\ a\r\n\ type\ of\ weather\ from\ the\ array.\r\n\r\n\ @param\ \ randomChance\ the\ chance\ of\ a\ type\ of\ weather\ being\ generated\r\n\ @return\ the\ type\ of\ weather\ to\ be\ applied\ to\ the\ simulation\r\n
+comment3.params=
+comment3.target=int\ getWeatherDuration()
+comment3.text=\r\n\ Return\ the\ duration\ of\ all\ types\ of\ weather.\r\n\ @return\ the\ duration\ of\ all\ types\ of\ weather.\r\n
+numComments=4
