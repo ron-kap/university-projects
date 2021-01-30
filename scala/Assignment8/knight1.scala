@@ -1,0 +1,177 @@
+// Part 1 about finding Knight's tours
+//=====================================
+
+// If you need any auxiliary function, feel free to 
+// implement it, but do not make any changes to the
+// templates below. Also have a look whether the functions
+// at the end are of any help.
+
+
+
+type Pos = (Int, Int)    // a position on a chessboard 
+type Path = List[Pos]    // a path...a list of positions
+
+//(1) Complete the function that tests whether the position x
+//    is inside the board and not yet element in the path.
+
+def is_legal(dim: Int, path: Path, x: Pos) : Boolean = if ((x._1 >= 0 && x._2 >= 0 && x._1 < dim && x._2 < dim ) && !(path.contains(x))) true else false
+/*
+is_legal(8, Nil, (3, 4))
+is_legal(8, List((4, 1), (1, 0)), (4, 1))
+is_legal(2, Nil, (0, 0))
+is_legal(8, Nil, (7,7))
+*/
+
+//(2) Complete the function that calculates for a position x
+//    all legal onward moves that are not already in the path. 
+//    The moves should be ordered in a "clockwise" manner.
+ 
+
+def legal_moves(dim: Int, path: Path, x: Pos) : List[Pos] = {
+  val lst = for (i <- (1 to 8).toList) yield {  // iterate through all (8) possible moves
+    i match { 
+      case 1 => if(is_legal(dim, path, (x._1 + 1,x._2 + 2))) List((x._1 + 1,x._2 + 2)) else Nil
+      case 2 => if(is_legal(dim, path, (x._1 + 2,x._2 + 1))) List((x._1 + 2,x._2 + 1)) else Nil
+      case 3 => if(is_legal(dim, path, (x._1 + 2,x._2 - 1))) List((x._1 + 2,x._2 - 1)) else Nil
+      case 4 => if(is_legal(dim, path, (x._1 + 1,x._2 - 2))) List((x._1 + 1,x._2 - 2)) else Nil
+      case 5 => if(is_legal(dim, path, (x._1 - 1,x._2 - 2))) List((x._1 - 1,x._2 - 2)) else Nil
+      case 6 => if(is_legal(dim, path, (x._1 - 2,x._2 - 1))) List((x._1 - 2,x._2 - 1)) else Nil
+      case 7 => if(is_legal(dim, path, (x._1 - 2,x._2 + 1))) List((x._1 - 2,x._2 + 1)) else Nil
+      case 8 => if(is_legal(dim, path, (x._1 - 1,x._2 + 2))) List((x._1 - 1,x._2 + 2)) else Nil
+    }
+  }
+  lst.flatten
+}
+//legal_moves(8, Nil, (7,7))
+
+/*    some test cases
+assert(legal_moves(8, Nil, (2,2)) == List((3,4), (4,3), (4,1), (3,0), (1,0), (0,1), (0,3), (1,4)))
+assert(legal_moves(8, Nil, (7,7)) == List((6,5), (5,6)))
+assert(legal_moves(8, List((4,1), (1,0)), (2,2)) == List((3,4), (4,3), (3,0), (0,1), (0,3), (1,4)))
+assert(legal_moves(8, List((6,6)), (7,7)) == List((6,5), (5,6)))
+legal_moves(8, Nil, (2,2)) == List((3,4), (4,3), (4,1), (3,0), (1,0), (0,1), (0,3), (1,4))
+legal_moves(8, Nil, (7,7)) == List((6,5), (5,6))
+legal_moves(8, List((4,1), (1,0)), (2,2)) == List((3,4), (4,3), (3,0), (0,1), (0,3), (1,4))
+legal_moves(8, List((6,6)), (7,7)) == List((6,5), (5,6))
+legal_moves(1, Nil, (0,0)) == Nil
+legal_moves(2, Nil, (0,0)) == Nil
+legal_moves(3, Nil, (0,0)) == List((1,2), (2,1))
+*/
+
+//(3) Complete the two recursive functions below. 
+//    They exhaustively search for knight's tours starting from the 
+//    given path. The first function counts all possible tours, 
+//    and the second collects all tours in a list of paths.
+
+
+def recEx(dim: Int, path: Path) : List[Path] = {
+  if (path.length > 0) {                                            // error check
+    if (path.length < dim * dim) {
+      (for (potPos <- legal_moves(dim, path, path.head)) yield {     // use for-each!!
+         recEx(dim, potPos::path)
+      }).flatten
+    }
+    else List(path)                                                 // wrap
+  }
+  else Nil
+}
+
+
+def count_tours(dim: Int, path: Path) : Int = recEx(dim, path).length
+
+def enum_tours(dim: Int, path: Path) : List[Path] = recEx(dim, path)
+
+
+/*
+enum_tours(1, List((0,0)) )
+enum_tours(2, List((0,0)) )
+enum_tours(3, List((0,0)) )
+count_tours(5, List((0,0)) )
+enum_tours(5, List((0,1)) ) == 0
+enum_tours(5, List((0,2)) )
+*/
+
+
+//(5) Implement a first-function that finds the first 
+//    element, say x, in the list xs where f is not None. 
+//    In that case Return f(x), otherwise None. If possible,
+//    calculate f(x) only once.
+
+// --COULD MODIFY w\ pattern matching       BOTH FIRSTs WORKS!!
+def first(xs: List[Pos], f: Pos => Option[Path]) : Option[Path] = xs match {
+  case Nil => None
+  case x::s => {
+    // const function val, cal before cond.
+    val funcVal = f(x)
+    if (funcVal != None) funcVal else first(s, f)
+  }
+}
+  /*
+  if (xs == Nil) None
+  else {
+    // const function val
+    val funcVal = f(xs.head)
+    if (funcVal != None) funcVal 
+    else {
+      first(xs.tail, f)
+    }
+  }
+  */
+
+
+// test cases
+//def foo(x: (Int, Int)) = if (x._1 > 3) Some(List(x)) else None
+//
+//first(List((1, 0),(2, 0),(3, 0),(4, 0)), foo)   // Some(List((4,0)))
+//first(List((1, 0),(2, 0),(3, 0)), foo)          // None
+
+
+
+
+//(6) Implement a function that uses the first-function from (5) for
+//    trying out onward moves, and searches recursively for a
+//    knight tour on a dim * dim-board.
+
+
+def first_tour(dim: Int, path: Path) : Option[Path] = {
+  if (path.length == dim * dim) Some(path)        //opt!, if done
+  else {
+    // format, path = list of pos(int,int)
+    first(legal_moves(dim,path,path.head),(ret => first_tour(dim, ret :: path)))
+  }
+}
+
+/*
+first_tour(6, List((0, 0)))
+first_tour(4, List((0, 0)))
+*/
+
+/* 
+Helper functions
+
+
+// for measuring time
+def time_needed[T](code: => T) : T = {
+  val start = System.nanoTime()
+  val result = code
+  val end = System.nanoTime()
+  println(f"Time needed: ${(end - start) / 1.0e9}%3.3f secs.")
+  result
+}
+
+// can be called for example with
+//     time_needed(count_tours(dim, List((0, 0))))
+// in order to print out the time that is needed for 
+// running count_tours
+
+// for printing a board
+def print_board(dim: Int, path: Path): Unit = {
+  println
+  for (i <- 0 until dim) {
+    for (j <- 0 until dim) {
+      print(f"${path.reverse.indexOf((j, dim - i - 1))}%3.0f ")
+    }
+    println
+  } 
+}
+*/
