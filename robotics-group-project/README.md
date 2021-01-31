@@ -7,7 +7,7 @@ This semester's task required us to develop a program that enabled the EV3 robot
 
 Below is a visual representation of the course.
 
-![Image of the course for Semester 1](media\sem1_task.jpg)
+![Image of the course for Semester 1](media/sem1_task.jpg)
 
 Additional information:
 - The robot will start at the red line
@@ -18,10 +18,10 @@ Additional information:
 - If the robot hits the obstacle or veers off the black line for more than 5 seconds, then the attempt is failed
 - The more laps completed in 5 minutes the higher the grade
 
-[Video demonstration](media\sem1_video.mp4) (one round) for our Semester 1 project [find at, media\sem1_video.mp4]
+[Video demonstration](media/sem1_video.mp4) (one round) for our Semester 1 project.
 
 ### Semester 1 Gantt chart
-![Semester 1 Gantt chart](media\sem1_gantt.jpg)
+![Semester 1 Gantt chart](media/sem1_gantt.jpg)
 
 ## Semester 2
 #### Group size: 2
@@ -29,7 +29,7 @@ This semester's required us to develop a program that enabled the EV3 robot to n
 
 Below is a visual representation of the arena.
 
-![Image of the arena for Semester 1](media\sem2_task.jpg)
+![Image of the arena for Semester 1](media/sem2_task.jpg)
 
 #### Tasks:
 1. Localise robot by using Bayesian to determine starting point and obstacle location at [Task 2].
@@ -41,15 +41,15 @@ Additional information:
 - If the robot hits any wall/obstacle (e.g. parking bay walls), then the attempt is failed
 -  55% upon completion of all above tasks, 5% for completion of two rounds in 5 minutes, 30% based on source code.
 
-Due to the limitation of not being able to take the EV3 robot home, our team created a simulated evironment to work on the prject without the physical robot. The Java file is [Semester2VT.java](program\src\Semester2VT.java), VT for virtual testing. A [spreadsheet](media\arena.xlsx) [find at, media\arena.xlsx] was also created to visualise the arena environment.
+Due to the limitation of not being able to take the EV3 robot home, our team created a simulated environment to work on the project without the physical robot. The Java file is [Semester2VT.java](program/src/Semester2VT.java), VT for virtual testing. A [spreadsheet](media/arena.xlsx) was also created to visualise the arena environment.
 
-[Video demonstration](media\sem2_video.mp4) (one round) for our Semester 2 project [find at, media\sem2_video.mp4]
+[Video demonstration](media/sem2_video.mp4) (one round) for our Semester 2 project.
 
 ### Semester 2 Gantt chart
-![Semester 2 Gantt chart](media\sem2_gantt.jpg)
+![Semester 2 Gantt chart](media/sem2_gantt.jpg)
 
 ## Main presentation
-[Main presentation](media\presentation.pdf) [find at, media\presentation.pdf]
+[Main presentation](media/presentation.pdf)
 
 #### Second-year, Java project
 #### Group work (3 people first semester, 2 people second semester)

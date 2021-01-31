@@ -5,7 +5,7 @@ Your task is to develop a GUI for exploring properties that are available for te
 
 ## Team work schedule (task delegation)
 
-![Image of team tasks schedule](media\schedule.jpg)
+![Image of team tasks schedule](media/schedule.jpg)
 
 #### First-year, Java project
 #### Group work (4 people)
